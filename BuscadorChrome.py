@@ -32,6 +32,7 @@ Chrome_driver.get("https://www.solotodo.cl/cells")
 WebDriverWait(driver,5)\
     .until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'search#inputSearch'))).send_keys('Apple')
     
+    
 
 
 
