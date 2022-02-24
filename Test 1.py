@@ -1,10 +1,8 @@
-# Importar Librerías    
+#Importar Librerías
 
-from fileinput import close
-from lib2to3.pgen2 import driver
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-#from time import sleep
+from time import sleep
 import random
 import pandas as pd
 from selenium.webdriver.common.keys import Keys
@@ -35,17 +33,15 @@ try:
    valor = Chrome_driver.find_elements_by_xpath("//div[contains(@class,'d-flex flex-column category-browse-result')]")
 
    for x in valor:
-       print(x.text)
+     print(x.text)
 
-#for equipo in equipos:
- #print('Informacion ' + str(equipo.text))
-   Chrome_driver.close()  
+for equipo in equipos:
+ print('Informacion ' + str(equipo.text))
+        Chrome_driver.close()
 
-except Exception as e:
-        print(e)
-        traceback.print_exc()
-
-
+#except Exception as e:
+        #print(e)
+        #traceback.print_exc()
 
 
 
@@ -56,20 +52,5 @@ except Exception as e:
 
 
 
-#buscador_list = []
 
- #for producto in Chrome_driver:
-    
-    #title = Chrome_driver.find_element_by_link_text('.//*[@id="filters-and-results"]/div/div/div[1]/div[2]/div/div[1]/h3/a').text
-    #store = Chrome_driver.find_element_by_xpath('.//*[@id="filters-and-results"]/div/div/div[1]/div[2]/div/div[1]/div[2]/dl/dd[3]').text
-    #value = Chrome_driver.find_element_by_xpath('.//*[@id="filters-and-results"]/div/div/div[1]/div[2]/div/div[1]/div[3]/div/a').text
-    
-    #product_item = {
-       # 'title': title,
-        #'store': store,
-        #'value': value
-        #}
 
-    #buscador_list.append(product_item)
-    #df = pd.DataFrame(buscador_list)
-    #print(df)
